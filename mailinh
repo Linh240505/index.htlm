@@ -1,0 +1,134 @@
+/* ============================================================
+   data.js — Dữ liệu sản phẩm, blog, người dùng (mock)
+   ============================================================ */
+
+// ---------- PRODUCTS ----------
+const PRODUCTS_DATA = [
+  {
+    id: 1, name: "Tượng Phật Di Lặc",
+    cat: "tuong", catLabel: "Tượng Gỗ",
+    price: 450000, oldPrice: 590000,
+    img: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80",
+    desc: "Tượng Di Lặc chạm khắc từ gỗ hương nguyên khối, cao 25cm. Biểu tượng may mắn và thịnh vượng cho gia đình.",
+    stars: 5, badge: "Bán chạy"
+  },
+  {
+    id: 2, name: "Đồng Hồ Walnut",
+    cat: "dong-ho", catLabel: "Đồng Hồ Gỗ",
+    price: 680000, oldPrice: null,
+    img: "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=600&q=80",
+    desc: "Đồng hồ treo tường làm từ gỗ óc chó tự nhiên, đường kính 30cm. Kim kim loại mạ vàng, máy Nhật chính xác.",
+    stars: 4, badge: null
+  },
+  {
+    id: 3, name: "Khay Chè 3 Ngăn",
+    cat: "khay", catLabel: "Khay & Kệ",
+    price: 320000, oldPrice: 380000,
+    img: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600&q=80",
+    desc: "Khay đựng chè, bánh kẹo gỗ thông tự nhiên 3 ngăn. Có nắp đậy từng ngăn riêng biệt, sơn PU bóng.",
+    stars: 5, badge: "Sale"
+  },
+  {
+    id: 4, name: "Đèn Ngủ Tre",
+    cat: "den", catLabel: "Đèn Trang Trí",
+    price: 520000, oldPrice: null,
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    desc: "Đèn ngủ phong cách Nhật Bản làm từ tre tự nhiên, ánh sáng vàng ấm 3000K. Kèm bóng LED tiết kiệm điện.",
+    stars: 4, badge: "Mới"
+  },
+  {
+    id: 5, name: "Tượng Cặp Chim Hạc",
+    cat: "tuong", catLabel: "Tượng Gỗ",
+    price: 750000, oldPrice: 890000,
+    img: "https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80",
+    desc: "Cặp hạc chạm khắc thủ công từ gỗ lim, biểu tượng trường thọ, sức khỏe và may mắn trong văn hóa Á Đông.",
+    stars: 5, badge: "Bán chạy"
+  },
+  {
+    id: 6, name: "Kệ Sách Mini",
+    cat: "khay", catLabel: "Khay & Kệ",
+    price: 280000, oldPrice: null,
+    img: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80",
+    desc: "Kệ sách mini 3 tầng gỗ pine Bắc Âu. Kích thước 40×15×50cm, phù hợp để bàn làm việc hoặc đầu giường.",
+    stars: 4, badge: null
+  },
+  {
+    id: 7, name: "Đồng Hồ Cây Sồi",
+    cat: "dong-ho", catLabel: "Đồng Hồ Gỗ",
+    price: 850000, oldPrice: 1000000,
+    img: "https://images.unsplash.com/photo-1585503418537-88331351ad99?w=600&q=80",
+    desc: "Đồng hồ để bàn hình vòm làm từ gỗ sồi trắng. Thiết kế minimalist, màn hình LED hiển thị giờ và nhiệt độ.",
+    stars: 5, badge: "Sale"
+  },
+  {
+    id: 8, name: "Đèn Sàn Mây Tre",
+    cat: "den", catLabel: "Đèn Trang Trí",
+    price: 1200000, oldPrice: null,
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+    desc: "Đèn sàn đan mây tre thủ công, cao 160cm. Ánh sáng lan tỏa qua nan mây tạo bóng đổ nghệ thuật. Kèm bóng LED.",
+    stars: 5, badge: "Mới"
+  },
+  {
+    id: 9, name: "Tượng Thiền Phật",
+    cat: "tuong", catLabel: "Tượng Gỗ",
+    price: 550000, oldPrice: 650000,
+    img: "https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?w=600&q=80",
+    desc: "Tượng Phật ngồi thiền từ gỗ trắc nguyên khối, cao 20cm. Chạm khắc tỉ mỉ từng chi tiết, đánh bóng bề mặt tự nhiên.",
+    stars: 4, badge: null
+  },
+  {
+    id: 10, name: "Khay Trà Tròn",
+    cat: "khay", catLabel: "Khay & Kệ",
+    price: 190000, oldPrice: null,
+    img: "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=600&q=80",
+    desc: "Khay trà tròn đường kính 35cm, gỗ teak tự nhiên. Có rãnh thoát nước, phù hợp nghi thức trà đạo.",
+    stars: 4, badge: null
+  },
+  {
+    id: 11, name: "Đèn Treo Nón Lá",
+    cat: "den", catLabel: "Đèn Trang Trí",
+    price: 380000, oldPrice: 420000,
+    img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80",
+    desc: "Đèn thả trần hình nón lá đặc trưng Việt Nam, đan bằng mây và tre. Kèm bóng Edison dây tóc vàng ấm.",
+    stars: 5, badge: "Sale"
+  },
+  {
+    id: 12, name: "Đồng Hồ Cổ Thụ",
+    cat: "dong-ho", catLabel: "Đồng Hồ Gỗ",
+    price: 950000, oldPrice: null,
+    img: "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=600&q=80",
+    desc: "Đồng hồ treo tường khắc hình cây cổ thụ từ gỗ walnut, kích thước 45×45cm. Thiết kế độc đáo, duy nhất.",
+    stars: 5, badge: "Mới"
+  }
+];
+
+// ---------- BLOG DATA ----------
+const BLOG_DATA = [
+  {
+    id: 1,
+    title: "Cách Chăm Sóc Đồ Gỗ Trang Trí Đúng Cách",
+    excerpt: "Bí quyết giữ cho đồ gỗ thủ công luôn bóng đẹp, bền màu theo thời gian mà không cần đưa đến thợ.",
+    img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=80",
+    date: "15 Tháng 6, 2025",
+    author: "Trần Minh Khoa",
+    tag: "Mẹo hay"
+  },
+  {
+    id: 2,
+    title: "Xu Hướng Nội Thất Gỗ 2025: Minimalism & Biophilic",
+    excerpt: "Năm 2025 chứng kiến sự trở lại mạnh mẽ của chất liệu gỗ trong thiết kế nội thất tối giản hướng tự nhiên.",
+    img: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80",
+    date: "3 Tháng 6, 2025",
+    author: "Lê Thị Hương",
+    tag: "Xu hướng"
+  },
+  {
+    id: 3,
+    title: "Nghề Chạm Khắc Gỗ Truyền Thống Việt Nam",
+    excerpt: "Hành trình khám phá làng nghề mộc Kim Bồng (Hội An) — nơi lưu giữ tinh hoa chạm khắc gỗ hàng trăm năm.",
+    img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80",
+    date: "20 Tháng 5, 2025",
+    author: "Nguyễn Quang Huy",
+    tag: "Văn hóa"
+  }
+];
